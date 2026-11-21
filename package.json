@@ -1,0 +1,10 @@
+{
+  "name": "ai-tool-saas-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ai-tool-nextjs-main run dev",
+    "build": "npm --prefix ai-tool-nextjs-main run build",
+    "start": "npm --prefix ai-tool-nextjs-main run start",
+    "lint": "npm --prefix ai-tool-nextjs-main run lint"
+  }
+}
