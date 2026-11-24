@@ -39,3 +39,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+// This is note.
