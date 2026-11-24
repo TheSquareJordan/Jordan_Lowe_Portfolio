@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERA Furniture &amp; Landscape</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img
+        class="hero-image"
+        src="image/Outside Furniture Card1.jpeg"
+        alt="Outdoor dining furniture in a landscaped backyard"
+      />
+      <div class="hero-content">
+        <h1>Your Place for Everything Furniture and Landscape</h1>
+        <p>
+          We design and create inviting outdoor environments for your home and
+          gatherings.
+        </p>
+        <div class="hero-buttons">
+          <a href="#cards" class="btn">Learn More</a>
+          <a href="#cards" class="btn btn-dark">View Services</a>
+          <a href="#footer" class="btn">Contact ERA</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Servies Section-->
+    <section id="cards" class="card-section">
+      <h2>Our Featured Services</h2>
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="image/Outside Furniture Card1.jpeg"
+            alt="Outdoor dining furniture and landscaped backyard"
+          />
+          <div class="card-content">
+            <h3>Outdoor Furniture</h3>
+            <p>
+              Carefully selected greenery and flowering plants to bring life and
+              color to your outdoor spaces.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="image/Outside Furniture Card2.jpeg"
+            alt="Backyard Coverings"
+          />
+          <div class="card-content">
+            <h3>Backyard Coverings</h3>
+            <p>
+              Pergolas, shade sails, and patio covers that tranform your
+              backyard into a comfortable reteat.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/Outside Furniture Card4.jpeg" alt="Outdoor fire pit and stone patio" />
+          <div class="card-content">
+            <h3>Fire Pits &amp; Patios</h3>
+            <p>
+              Beautifully laid pathways using natural stone, pavers, and
+              creative landscape design.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="image/Outside Furniture Card1.jpeg"
+            alt="Outdoor dining area surrounded by greenery"
+          />
+          <div class="card-content">
+            <h3>Ambience and Lighting</h3>
+            <p>
+              Strategic outdoor lighting to create the perfect mood for evening
+              gatherings and relaxation.
+            </p>
+
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; <span id="year"></span> Eras Furniture &amp; Landscape. All
+        rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          var target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Card scroll-reveal animation
+      var cards = document.querySelectorAll(".card");
+      function revealCards() {
+        var triggerBottom = window.innerHeight * 0.85;
+        cards.forEach(function (card) {
+          var cardTop = card.getBoundingClientRect().top;
+          if (cardTop < triggerBottom) {
+            card.classList.add("show");
+          }
+        });
+      }
+      window.addEventListener("scroll", revealCards);
+      revealCards();
+
+      // Dynamic year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
