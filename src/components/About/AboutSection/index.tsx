@@ -39,4 +39,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-// This is note.
+// This is note. This is another note.
